@@ -12,7 +12,7 @@ const get_url = function (state) {
         if (state.state) {
             url += "," + state.state
         }
-        if (url.country) {
+        if (state.country) {
             url += "&country=" + state.country
         }
     }    
