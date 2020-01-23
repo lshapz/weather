@@ -17,7 +17,7 @@ constructor(props){
 static contextType = Context;
 
 handleOnChange(event){
-    debugger
+    // debugger
     if (event.target.type.includes('text')) {
         let name = event.target.name;
         if (name === "location") {
@@ -60,18 +60,21 @@ render(){
     let label = this.state.searchBy[0].toUpperCase() + this.state.searchBy.slice(1);
     return (
     <form className="form" onSubmit={this.handleOnSubmit} onChange={this.handleOnChange}>
-        <label className="subForm"> <span className="searchBy searchSpan">Search By:</span> &nbsp; 
-            <span className="searchBy"><input type="radio" name="searchBy" value="city" /><label htmlFor="city">City </label>&nbsp;  </span>
-            <span className="searchBy"><input type="radio" name="searchBy" value="zip" defaultChecked />  <label htmlFor="zip">&nbsp; Zip Code </label></span>
+        <label className="subForm"> <span className="searchBy searchSpan">Search By:</span>
+            <label className="searchBy" htmlFor="city">City <input type="radio" name="searchBy" value="city" /></label>
+            <label className="searchBy" htmlFor="zip">Zip <input type="radio" name="searchBy" value="zip" defaultChecked />  </label>
         </label>
+        <span className="subForm">
 
-        <label> {this.state.searchBy[0].toUpperCase() + this.state.searchBy.slice(1)}: <input onChange={this.handleOnChange} type="text" name="location" /></label>
-        {this.state.searchBy === "city" ?
-            <label> State:<input onChange={this.handleOnChange} type="text" name="state" /></label> : null 
-        }
-        {this.state.searchBy === "city" ?
-            <label> Country:<input onChange={this.handleOnChange} type="text" name="country" /></label> : null 
-        }
+        <label className="locale"> {this.state.searchBy[0].toUpperCase() + this.state.searchBy.slice(1)}: <input onChange={this.handleOnChange} type="text" name="location" /></label>
+            {this.state.searchBy === "city" ?
+                <label className="locale"> State:<input onChange={this.handleOnChange} type="text" name="state" /></label> : null 
+            }
+            {this.state.searchBy === "city" ?
+                <label className="locale"> Country:<input onChange={this.handleOnChange} type="text" name="country" /></label> : null 
+            }
+        </span>
+
 
 
 

@@ -1,16 +1,18 @@
 body {
   margin: 0;
   background-color: skyblue;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-family: "Times New Roman", serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+h1 {
+  font-family: "Roboto", sans-serif;
+}
+
+h4 {
+  /* text-shadow: 1px 1px #0688fa; */
+  font-style: italic;
 }
 
 .image, .form {
@@ -30,57 +32,77 @@ form > * {
 }
 
 .myButton {
-	box-shadow:inset 0px -3px 7px 0px #29bbff;
-	background:linear-gradient(to bottom, #2dabf9 5%, #0688fa 100%);
-	background-color:#2dabf9;
+	box-shadow:inset 0px -3px 7px 0px skyblue;
+	background:linear-gradient(to bottom, skyblue 10%, #0688fa 100%);
+	background-color:skyblue;
 	border-radius:3px;
-	border:1px solid #0b0e07;
+	border:1px solid 0688fa;
 	display:inline-block;
 	cursor:pointer;
-	color:#ffffff;
-	font-family:Arial;
+	color:black;
+	font-family:'Times New Roman';
 	font-size:15px;
-	padding:9px 23px;
+	padding:7px 20px;
 	text-decoration:none;
-	text-shadow:0px 1px 0px #263666;
+	/* text-shadow:0px 1px 0px #263666; */
 }
 .myButton:hover {
-	background:linear-gradient(to bottom, #0688fa 5%, #2dabf9 100%);
+	background:linear-gradient(to top, #0688fa 10%, skyblue 50%);
 	background-color:#0688fa;
 }
 .myButton:active {
 	position:relative;
 	top:1px;
 }
+label {
+  font-weight: bold;
+}
 
 .subForm {
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
-    margin:  0vh 35vw;
-  }
+    /* padding: 1rem; */
+    flex-wrap: wrap;
 
-.searchBy {
+}
+
+.subForm .locale {
+  margin: 1rem;
+}
+
+.subForm ~ input {
+  margin: 5px;
+}
+
+input {
+  margin: 5px;
+}
+
+
+.searchBy, .locale {
   display: flex;
-  flex-direction: column-reverse;
-  align-items: center;
+  flex-direction: column;
   align-content: space-around;
+
 }
 .searchSpan {
   align-self: center;
 }
-input[type="text"] {
-  border: 1px solid white; 
-  -webkit-box-shadow: 
-    inset 0 0 8px  rgba(0,0,0,0.1),
-          0 0 16px rgba(0,0,0,0.1); 
-  -moz-box-shadow: 
-    inset 0 0 8px  rgba(0,0,0,0.1),
-          0 0 16px rgba(0,0,0,0.1); 
-  box-shadow: 
-    inset 0 0 8px  rgba(0,0,0,0.1),
-          0 0 16px rgba(0,0,0,0.1); 
-  padding: 3px;
-  background: rgba(255,255,255,0.5);
-  margin: 0 0 10px 0;
+.searchBy {
+  align-items: center;
+  margin: 10px 15px 10px 10px;
+
 }
+.locale {
+  align-items: flex-start;
+}
+
+
+input[type="text"] {
+  border: 3px solid white; 
+  padding: 3px;
+  background:skyblue;
+  border-radius: 5px;
+}
+
